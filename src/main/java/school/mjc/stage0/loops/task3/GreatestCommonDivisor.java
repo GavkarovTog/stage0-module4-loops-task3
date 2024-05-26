@@ -5,8 +5,9 @@ public class GreatestCommonDivisor {
         int minimal = first > second ? first : second;
 
         for (int i = minimal; i >= 1; i --) {
-            if (first % minimal == 0 && second % minimal == 0) {
-                System.out.println(minimal);
+            if (first % i == 0 && second % i == 0) {
+                System.out.println(i);
+                i = 0;
             }
         }
     }
